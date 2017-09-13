@@ -21,6 +21,7 @@ set $browser firefox-esr	# AUR install
 #set $launcher dmenu_run		# Dmenu for now
 set $launcher rofi -show run
 set $lock ~/.config/i3/scripts/lock.sh
+set $flash --no-startup-id bash ~/.config/i3/scripts/flash_win.sh
 
 ## External Startup Scripts
 # Composite manager
@@ -69,6 +70,9 @@ bindsym $mod+q				kill
 
 #bindsym $mod+d				exec $launcher
 bindsym Control+space		exec $launcher
+
+# Flash the window
+bindsym $mod+BackSpace		exec $flash
 
 # Change these to be vimlike
 bindsym $mod+h				focus left
