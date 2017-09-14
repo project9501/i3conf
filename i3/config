@@ -38,13 +38,15 @@ exec --no-startup-id unclutter
 exec --no-startup-id dropbox
 # Conky
 exec --no-startup-id ~/.config/i3/scripts/conky_start.sh
+# Udiskie
+exec --no-startup-id udiskie --tray --use-udisks2
 
 floating_modifier $mod
 
 # Define dropdown/scratchpad windows
 
 for_window [instance="tpad"] floating enable
-for_window [instance="tpad"] resize set 625 400
+for_window [instance="tpad"] resize set 800 600
 for_window [instance="tpad"] move position center
 for_window [instance="tpad"] move scratchpad
 exec --no-startup-id $term -name tpad -e tmux
