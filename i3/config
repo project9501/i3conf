@@ -57,6 +57,14 @@ for_window [instance="math"] move position center
 for_window [instance="math"] move scratchpad
 exec --no-startup-id $term -fn "xft:mono:pixelsize=24" -name math -e R -q
 
+# Glances dropdown -- system monitor
+
+for_window [instance="glances"] floating enable
+for_window [instance="glances"] resize set 960 720
+for_window [instance="glances"] move position center
+for_window [instance="glances"] move scratchpad
+exec --no-startup-id $term -name glances -e glances
+
 # Basic bindings
 bindsym $mod+Return			exec $term
 bindsym $mod+Shift+Return	exec $term -e tmux
@@ -66,6 +74,7 @@ bindsym $mod+apostrophe		split horizontal ;; exec $term
 # Drop-downs
 bindsym $mod+u				[instance="tpad"] scratchpad show; move position center
 bindsym $mod+c				[instance="math"] scratchpad show; move position center
+bindsym $mod+g				[instance="glances"] scratchpad show; move position center
 
 bindsym $mod+Shift+q		kill
 bindsym $mod+q				kill

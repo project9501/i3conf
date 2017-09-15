@@ -5,4 +5,4 @@
 sleep 6
 
 conky -d -c ~/.config/conky/gotham.conf
-conky -d -c ~/.config/conky/leftpane.conf
+#conky -d -c ~/.config/conky/leftpane.conf
