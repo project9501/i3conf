@@ -60,7 +60,7 @@ exec --no-startup-id $term -fn "xft:mono:pixelsize=24" -name math -e R -q
 # Glances dropdown -- system monitor
 
 for_window [instance="glances"] floating enable
-for_window [instance="glances"] resize set 960 720
+for_window [instance="glances"] resize set 1200 720
 for_window [instance="glances"] move position center
 for_window [instance="glances"] move scratchpad
 exec --no-startup-id $term -name glances -e glances
