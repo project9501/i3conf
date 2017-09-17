@@ -43,10 +43,10 @@ if [ ! -L ~/.Xdefaults ]; then
 fi
 
 # .config/compton.conf
-if [ ! -L ~/.compton.conf ]; then
-	if [ -f ~/.compton.conf ]; then
-		echo "Moving ~/.compton.conf to $BKDIR..."
-		mv -n ~/.compton.conf $BKDIR/
+if [ ! -L ~/.config/compton.conf ]; then
+	if [ -f ~/.config/compton.conf ]; then
+		echo "Moving ~/.config/compton.conf to $BKDIR..."
+		mv -n ~/.config/compton.conf $BKDIR/
 	fi
 	echo "Creating symlink to .compton.conf in home directory..."
 	ln -s $SOURCEDIR/compton.conf ~/.config/compton.conf
@@ -80,4 +80,14 @@ if [ ! -L ~/.config/polybar ]; then
 	fi
 	echo "Creating symlink to polybar/ in .config directory..."
 	ln -s $SOURCEDIR/polybar ~/.config/polybar
+fi
+
+# .config/doc
+if [ ! -L ~/.config/doc ]; then
+	if [ -d ~/.config/doc ]; then
+		echo "Moving ~/.config/doc to $BKDIR..."
+		mv -n ~/.config/doc $BKDIR/
+	fi
+	echo "Creating symlink to doc/ in .config directory..."
+	ln -s $SOURCEDIR/doc ~/.config/doc
 fi

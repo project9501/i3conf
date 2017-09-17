@@ -17,8 +17,9 @@ set $mod Mod4
 
 # Default programs
 set $term urxvt
-set $browser firefox-esr	# AUR install
+#set $browser firefox-esr	# AUR install
 #set $launcher dmenu_run		# Dmenu for now
+set $browser chromium
 set $launcher rofi -show run
 set $lock ~/.config/i3/scripts/lock.sh
 set $flash --no-startup-id bash ~/.config/i3/scripts/flash_win.sh
@@ -81,6 +82,9 @@ bindsym $mod+q				kill
 
 #bindsym $mod+d				exec $launcher
 bindsym Control+space		exec $launcher
+
+# Help file
+bindsym $mod+F1				exec firefox-esr -P "default" --no-remote ~/.config/doc/helpwiki.html
 
 # Flash the window
 bindsym $mod+BackSpace		exec $flash
