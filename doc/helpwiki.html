@@ -165,6 +165,8 @@ Error message and password prompt
 
 <li>15 Things to do After Installing Arch Linux</li>
 
+<li>A Guide to Being Private Online</li>
+
 <li>Additional Software</li>
 
 <li>Arch Linux Index</li>
@@ -183,6 +185,8 @@ Error message and password prompt
 
 <li>etc-skel</li>
 
+<li>Force all network traffic through OpenVPN using iptables</li>
+
 <li>git</li>
 
 <li>Index</li>
@@ -192,6 +196,8 @@ Error message and password prompt
 <li>IRC Basic Commands</li>
 
 <li>jekyll and tilde.town</li>
+
+<li>Linux kernel transproxy packet leak</li>
 
 <li>pacman</li>
 
@@ -8239,7 +8245,7 @@ Error message and password prompt
 <div created="20170413222835650" modified="20170413222835650" title="$:/state/tabs/controlpanel/toolbars-1345989671">
 <pre>$:/core/ui/ControlPanel/Toolbars/PageControls</pre>
 </div>
-<div list="Index Articles [[IRC Basic Commands]] [[CLI Utilities]] irc" title="$:/StoryList">
+<div list="Index Articles" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -8453,6 +8459,253 @@ Error message and password prompt
    sudo pacman -S pulseaudio pavucontrol pulseaudio-alsa alsa-utils
 ```</pre>
 </div>
+<div created="20170917232348510" modified="20170917232419408" tags="" title="A Guide to Being Private Online" type="text/x-markdown">
+<pre>[Source](https://greycoder.com/privacy-roadmap/ &quot;Permalink to A Guide To Being Private Online&quot;)
+
+Privacy on the internet is something we should all seek. Even if you feel you have &quot;nothing to hide&quot; you probably still value having curtain on your windows, and you would probably prefer that your credit card statement not be broadcast to everyone each month.
+
+Here are my tips for maintaining privacy:
+
+## Use A Search Engine That Doesn't Track You
+
+![DuckDuckGo \(Screenshot\) ][1]
+
+Many popular search engines like Google and Bing save your search history. Typically, your searches are saved along with some information about your computer (e.g. your [IP address][2], [User Agent][3] and often a unique identifier stored in a [browser cookie][4]), and if you are logged in, your name and email address as also recorded. With this information, your searches can be tied together. This means someone can see everything you've been searching, not just one isolated search. You can usually find out a lot about a person from their search history.
+
+[StartPage][5] is a search engine that removes all identifying information from your query and submits it anonymously to Google.
+
+[DuckDuckGo][6] is another good search engine with a focus on privacy. It does not record user information — see their [privacy policy][7] for the details.
+
+See my article [How To Make Your Searches Private, Ad-Free And Uncluttered][8] for more details.
+
+## Move Away From Email Providers That Scan Your Email
+
+![Screen Shot 2016-05-13 at 3.06.36 PM][9]
+
+[FastMail][10] is an independent email service that doesn't scan your messages. Based in Australia, the service has been running for 15 years, and they have a [good privacy policy][11] regarding email storage. Here's what they say:
+
+* we use encrypted SMTP for sending your mail when the receiving server supports it
+* we mandate encrypted access for webmail, IMAP and POP
+* we use [Perfect Forward Secrecy][12] where possible for all encrypted connections
+* we encrypt all email while at rest on our servers
+* we encrypt communications between our data centers
+
+[FastMail][10]'s prices start at $10 per year.
+
+If you need end-to-end email encryption, I recommend [ProtonMail][13] —  a reliable encrypted email provider based in Switzerland.
+
+See my article [A List Of Email Providers That Don't Track You][14] for more information.
+
+For a mail client, I recommend the open-source [Thunderbird][15] email client with [JunQuila][16] add-on to control spam.
+
+## Use A Privacy-Friendly Browser
+
+![Firefox \(screenshot\)][17]
+
+Use a secure web browser like [Firefox][18] with privacy-mode turned on, and these add-ons installed: [HTTPs Everywhere][19] and [uBlock Origin][20].
+
+Tips on web browser privacy:
+
+* Turn off [third-party cookies][21] — these are cookies that are sent to advertising firms. Turning off these cookies just means you'll be tracked less — it won't affect your browsing ability.
+* I prefer to turn off cookies completely, and use the [Cookie Whitelist][22] add-on to only accept cookies from specific sites where I login
+* You can install a extension like [uBlock Origin][20] (Firefox, Chrome) to block ads, thereby reducing the amount of information collected by advertisers
+* The [HTTPs Everywhere][19] is an extension for the Firefox and Chrome browsers, made by the [Electronic Frontiers Foundation][23]. It encrypts your communications with many major websites, giving you a basic level of web browsing privacy.
+* You can turn off Java and Flash in your browser (both can be a security risk — see an explanation [here][24])
+* You can install an extension like [No Script][25] (Firefox only), which stops web pages loading and running Javascript, Java and Flash. Using [No Script][25] can be tedious but it protects against attacks like [Cross-Site Scripting (XSS)][26] and [Clickjacking][27] (a trick that causes you to click and run a malicious program)
+* If you want to browse anonymously, use the [Tor Browser Bundle][28]. It is a free application that is available for Windows, Macs and Linux. See my article on [Tor][29] for more details.
+
+## Keep Your Personal Information Private
+
+Today, many companies want to collect your personal information in databases. Here are some tools to avoid this process:
+
+ 
+
+* The [Fake Name Generator][30] is a free tool that instantly creates a set of fake credentials, for dealing with companies that request unnecessary personal information. It will create a completely fictitious identity that includes a fake name, telephone number, email address, street address and credit card number.
+* [SpamGourmet][31] is a free service that allows you to create an unlimited number of disposal email addresses. See my [article][32] where I explain how to use this service.
+* [Safe Shepard][33] is a free service that removes your name from various &quot;people search&quot; databases (e.g.[ PeekYou][34]).
+* The [Account Killer][35] websites gives your instruction about deleting yourself from sites like Facebook and Twitter. See also [Permanently Deleting Accounts on Popular Websites][36].
+
+You can read about other ways to opt-out [here][37].
+
+## Use A Password Manager
+
+![LastPass \(Screenshot\)][38]
+
+Password managers allow you create strong, unique passwords for all your websites accounts. They will then automatically log you into websites, thus preventing [key-logging][39] (attempts to capture your keystrokes and hence your passwords).
+
+An excellent password manager is [LastPass][40] which includes a &quot;secure note&quot; feature. The premium version of Lastpass costs $12 per year.
+
+Another alternative is [Keypass][41]. It's a free, open source password manager, but does have many of the useful features of LastPass
+
+## Use A VPN To Avoid Snoopers
+
+![ExpressVPN \(Screenshot\)][42]
+
+[ExpressVPN][43] is a virtual private network (VPN) service that is fast and reliable. It's my top pick for a VPN (see more details [here][44]). Prices are $58 per year, or $9 per month.
+
+See my article [The Best VPNs][45] for a list of all my recommended VPN providers.
+
+You may wish to get a [VPN-capable router][46]. The router will provides a VPN connections to all your computers and mobile devices. You won't have to install a VPN client on each device, all those connected devices count as one connection with your VPN provider.
+
+[FlashRouters][47] sells routers with a VPN pre-installed. See my article [The Best VPN Routers][48] for more details.
+
+## Use Privacy-Friendly Forums
+
+![Discourse \(Screenshot\)][49]
+
+I recommend these apps for creating private forums and social networks: [Discourse][50] or [BuddyPress][51].
+
+[Retroshare][52] is a free, open source messaging system for encrypted &quot;friend-to-friend&quot; communication.
+
+Here are some open source, federated apps for create forums: [Buddycloud][53], [Friendica][54], [Movim][55] or [Pump.io][56]
+
+[Diaspora*][57] is a free open source social network. It's a community-run distributed network so there's many  installations or &quot;pods&quot;. Here's a  [list of pods][58] — I recommend the [socializer.cc][59] pod.
+
+[WordPress][52] is a free and open source blogging system.
+
+## Use Encrypted Voice and SMS
+
+![Telegram Messaging \(Screenshot\)][60]
+
+These apps allow you send encrypted text messages: [Telegram][61], [TextSecure][62] (Android) by [Open Whisper Systems][63], [Wickr][64] (Android and iOS), [Cryptocat][65] (iOS),
+
+These apps allow you make encrypted phone calls: [Signal][66] (iOS) by Open Whisper Systems, [Redphone][63] (Android) by Open Whisper Systems, [Ostel][67] (Android), [Silent Circle][68] (iOS and Android).
+
+These apps allow you create disposable phone numbers: [Hushed][69], [Burner][70] (see more information in [my article][71]).
+
+## Use Computers and Mobile Devices That Don't Track You
+
+![The Blackphone 2 \(Screenshot\)][72]
+
+Currently, your best choice for a private mobile device is one that runs Android which is technically open source. However, the Android operating system provided with phones and tablets is often modified with the addition of proprietary applications from Google or others and may compromise your privacy.
+
+The [Blackphone][73] is a privacy-friendly smart phone produced by Silent Circle. The phone features encrypted phone service, secure messaging and many other security-oriented features. See my article on [Blackphone][74] for more details.
+
+You can also &quot;jailbreak&quot; an Android device, and replace the OS with [Replicant (a free Android distribution)][75] or [CyanogenMod][76]. See [The Unlockr][77] website for more information on how to unlock/root your device (or go directly to [Cyanogenmod][78] or [F-Droid][79]).
+
+[ThinkPenguin][80] sells desktop and laptop computers that come with [Linux][81] pre-installed and pre-configured
+
+[Elementary OS][82] is a Linux distribution that resembles Apple's OS X. See my [article][83] for more details.
+
+## Secure Your Computers
+
+Use a strong passwords for your user accounts.
+
+Set your computer to log you out after 15 minutes.
+
+Keep your systems and application updated, to avoid malware.
+
+Encrypt your hard drives where possible. Some Mac and Linux installations have drive encryption built  into the operating system — you just have to turn it on.
+
+## Secure Your Home Network
+
+When setting up a wireless network use WPA2 encryption, use MAC address identification, set you network to not announce itself.
+
+Set up you your router's firewall — only open necessary ports. [PeerGuardian][84] is a privacy-oriented firewall application
+
+## Use A Private Operating System If You Need To Be Anonymous
+
+[Tails][85] is a free operating-system designed to be used from a DVD or a USB stick independently of the computer's original operating system. Tails can be run in &quot;read-only&quot; installation, meaning it does not write any files to disk. This provides a high level of privacy because the operating system leave no traces of the user's activities, and there's little chance of the user being monitored by key-loggers and other tracking software.
+
+You can also run an OS inside a Virtual VM — see my article [Running A Virtual Machine][86] for more details.
+
+## More Recommendations
+
+The [Prism Break][87] website is another good list of privacy-friend apps and service. These sites also have good recommendations: [AlternativeTo][88], [Quora][89] and [Reddit Open Source][90]
+
+[1]: https://273hny3uh9sk23twrq16r4aw-wpengine.netdna-ssl.com/wp-content/uploads/2014/10/Screen-Shot-2016-05-13-at-3.01.21-PM-e1463166175645.png
+[2]: https://duckduckgo.com/IP_Address
+[3]: https://duckduckgo.com/User_agent
+[4]: https://duckduckgo.com/HTTP_cookie
+[5]: https://www.startpage.com
+[6]: https://duckduckgo.com
+[7]: https://duckduckgo.com/privacy
+[8]: http://www.greycoder.com/optimal-searching-get-private-ad-free-uncluttered-google-enhanced-search/
+[9]: https://273hny3uh9sk23twrq16r4aw-wpengine.netdna-ssl.com/wp-content/uploads/2014/10/Screen-Shot-2016-05-13-at-3.06.36-PM-766x519.png
+[10]: http://www.fastmail.com/?STKI=13946949
+[11]: https://www.fastmail.fm/help/legal/privacy.html
+[12]: http://en.wikipedia.org/wiki/Perfect_forward_secrecy
+[13]: https://protonmail.ch/
+[14]: http://www.greycoder.com/private-email-providers/ &quot;A List Of Email Providers That Don't Track You&quot;
+[15]: https://www.mozilla.org/en-US/thunderbird/
+[16]: https://addons.mozilla.org/en-US/thunderbird/addon/junquilla/
+[17]: https://273hny3uh9sk23twrq16r4aw-wpengine.netdna-ssl.com/wp-content/uploads/2014/10/Screen-Shot-2016-05-13-at-3.23.35-PM.png
+[18]: https://www.mozilla.org/en-US/firefox/new/
+[19]: https://www.eff.org/https-everywhere
+[20]: https://github.com/gorhill/uBlock
+[21]: https://en.wikipedia.org/wiki/Third-party_cookie#Privacy_and_third-party_cookies
+[22]: https://addons.mozilla.org/en-US/firefox/addon/cookie-whitelist-with-buttons/
+[23]: https://www.eff.org
+[24]: http://noscript.net/faq#qa1_10
+[25]: http://noscript.net/
+[26]: http://en.wikipedia.org/wiki/Cross_site_scripting &quot;Wikipedia definition for XSS&quot;
+[27]: https://en.wikipedia.org/wiki/Clickjacking
+[28]: http://greycoder.com/tor-a-truly-anonymous-internet/
+[29]: http://greycoder.com/tor-a-truly-anonymous-internet/ &quot;Tor: A Truly Anonymous Internet&quot;
+[30]: http://www.fakenamegenerator.com/
+[31]: https://spamgourmet.com/
+[32]: http://www.greycoder.com/use-a-disposal-email-address-when-you-dont-want-to-give-out-your-real-one/
+[33]: https://www.safeshepherd.com/
+[34]: http://www.peekyou.com/
+[35]: http://www.accountkiller.com/en/
+[36]: http://www.smashingmagazine.com/2010/06/11/how-to-permanently-delete-your-account-on-popular-websites//
+[37]: http://www.greycoder.com/opt-unwanted-catalogs-mailers/
+[38]: https://273hny3uh9sk23twrq16r4aw-wpengine.netdna-ssl.com/wp-content/uploads/2014/10/Screen-Shot-2016-05-13-at-3.34.47-PM-e1463168191463.png
+[39]: https://en.wikipedia.org/wiki/Keystroke_logging
+[40]: https://lastpass.com/f?4157936 
+[41]: http://greycoder.com/goto/lastpass
+[42]: https://273hny3uh9sk23twrq16r4aw-wpengine.netdna-ssl.com/wp-content/uploads/2014/10/Screen-Shot-2016-05-13-at-3.20.57-PM-e1463167340460.png
+[43]: http://greycoder.com/goto/expressvpn
+[44]: http://www.greycoder.com/best-vpns-2014/ &quot;The Best VPN Service Providers 2014&quot;
+[45]: https://greycoder.com/best-vpn-service/
+[46]: https://greycoder.com/best-vpn-routers/
+[47]: http://www.greycoder.com/goto/flashrouters
+[48]: https://greycoder.com/best-vpn-routers/ &quot;The Best VPN Routers Of 2014&quot;
+[49]: https://273hny3uh9sk23twrq16r4aw-wpengine.netdna-ssl.com/wp-content/uploads/2014/10/Screen-Shot-2016-05-13-at-3.38.57-PM.png
+[50]: https://www.discourse.org/
+[51]: http://buddypress.org
+[52]: http://retroshare.sourceforge.net/
+[53]: http://buddycloud.com/
+[54]: http://friendica.com/
+[55]: https://movim.eu/
+[56]: http://pump.io
+[57]: https://joindiaspora.com/
+[58]: http://podupti.me/
+[59]: https://socializer.cc
+[60]: https://273hny3uh9sk23twrq16r4aw-wpengine.netdna-ssl.com/wp-content/uploads/2014/10/Screen-Shot-2016-05-13-at-3.15.36-PM-e1463167002295.png
+[61]: https://telegram.org/
+[62]: https://www.whispersystems.org/#privacy
+[63]: https://whispersystems.org/
+[64]: https://wickr.com/ &quot;Wickr: Send Self-Destructing, Encrypted Messages On An iPhone&quot;
+[65]: https://crypto.cat/
+[66]: https://itunes.apple.com/app/id874139669
+[67]: https://ostel.co/
+[68]: https://silentcircle.com/#apps
+[69]: http://hushed.com/
+[70]: http://burnerapp.com/
+[71]: http://www.greycoder.com/get-disposal-phone-number-text-sms-address/ &quot;How To Get A Disposal Phone Number Or Text (SMS) Address&quot;
+[72]: https://273hny3uh9sk23twrq16r4aw-wpengine.netdna-ssl.com/wp-content/uploads/2014/10/Screen-Shot-2016-05-13-at-3.19.11-PM.png
+[73]: https://www.blackphone.ch/
+[74]: http://www.greycoder.com/blackphone/
+[75]: http://replicant.us
+[76]: http://www.cyanogenmod.org/
+[77]: http://theunlockr.com/rooting-and-jailbreaking/
+[78]: http://www.cyanogenmod.com/
+[79]: http://f-droid.org/
+[80]: https://www.thinkpenguin.com/
+[81]: https://en.wikipedia.org/wiki/Linux
+[82]: http://elementaryos.org/
+[83]: https://greycoder.com/elementary-os-luna-linux-distribution-similar-mac-osx/ &quot;Elementary OS Luna: A Linux Distribution Similar To Apple's OS X&quot;
+[84]: http://sourceforge.net/projects/peerguardian/
+[85]: https://tails.boum.org/
+[86]: https://greycoder.com/using-a-vpn-inside-a-virtual-machine-for-extra-anonyminity/
+[87]: https://prism-break.org
+[88]: https://alternativeto.net/
+[89]: https:/Quora.Com
+[90]: https://www.reddit.com/r/opensource
+
+  </pre>
+</div>
 <div created="20170903183257544" modified="20170915020717641" title="Additional Software">
 <pre>!! Community Repos
 
@@ -8560,10 +8813,16 @@ Error message and password prompt
 
 * [[15 Things to do After Installing Arch Linux]] -- Don't Call Me Lenny (YouTube)</pre>
 </div>
-<div created="20170907051438378" modified="20170917134844300" title="Articles">
+<div created="20170907051438378" modified="20170917232439431" title="Articles">
 <pre>!!! Howtos
 * [[Using Git and Github to Manage Your Dotfiles]]
-* [[IRC Basic Commands]]</pre>
+* [[IRC Basic Commands]]
+* [[Force all network traffic through OpenVPN using iptables]]
+
+!!! Security
+
+* [[Linux kernel transproxy packet leak]] (potentially obsolete, from 2014)
+* [[A Guide to Being Private Online]]</pre>
 </div>
 <div created="20170905020443403" modified="20170905020532347" title="bash">
 <pre>I'm assuming a bash shell, or similar, since there is no shell listed in the tags.
@@ -8835,6 +9094,118 @@ Common configuration files go in /etc/skel.  I personally have the following tha
 Okay I have utterly no idea why the list formatting isn't working.
 </pre>
 </div>
+<div created="20170917205122772" modified="20170917205158120" tags="" title="Force all network traffic through OpenVPN using iptables" type="text/x-markdown">
+<pre>[Source](https://jamielinux.com/blog/force-all-network-traffic-through-openvpn-using-iptables/ &quot;Permalink to Force all network traffic through OpenVPN using iptables — Jamie Nguyen&quot;)
+
+Many people use OpenVPN to prevent snooping of their network traffic, such as when connected to an untrusted wireless network. But how can you be sure that no traffic ever leaks outside of the tunnel?
+
+OpenVPN has a `redirect-gateway` option that directs all network traffic through the tunnel; it replaces the existing default route (that usually points to your local wireless router) with a new default route to the VPN endpoint.
+
+It sounds perfect, but if the tunnel is broken unintentionally, the default route may change back and cause traffic to leak.
+
+One solution is to use iptables to deny all outgoing traffic except when the traffic passes through the tunnel. If the tunnel is broken, access to the Internet is no longer possible until the tunnel is re-established.
+
+Note
+
+These instructions assume you're using TUN-based routing to connect to the OpenVPN server, and that you're using the `redirect-gateway` OpenVPN client option.
+
+In this example, the remote OpenVPN server is located at `203.0.113.100` and is listening to UDP port `1194`. Create a file anywhere (eg, `/root/iptables.openvpn`) with these contents:
+    
+    
+    *mangle
+    :PREROUTING ACCEPT [0:0]
+    :INPUT ACCEPT [0:0]
+    :FORWARD ACCEPT [0:0]
+    :OUTPUT ACCEPT [0:0]
+    :POSTROUTING ACCEPT [0:0]
+    COMMIT
+    
+    *nat
+    :PREROUTING ACCEPT [0:0]
+    :INPUT ACCEPT [0:0]
+    :OUTPUT ACCEPT [0:0]
+    :POSTROUTING ACCEPT [0:0]
+    COMMIT
+    
+    # Set a default DROP policy.
+    *filter
+    :INPUT DROP [0:0]
+    :FORWARD DROP [0:0]
+    :OUTPUT DROP [0:0]
+    
+    # Allow basic INPUT traffic.
+    -A INPUT -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT
+    -A INPUT -i lo -j ACCEPT
+    -A INPUT -p icmp --icmp-type 8 -m conntrack --ctstate NEW -j ACCEPT
+    
+    # Allow basic OUTPUT traffic.
+    -A OUTPUT -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT
+    -A OUTPUT -o lo -j ACCEPT
+    -A OUTPUT -p icmp -j ACCEPT
+    
+    # Allow traffic to the OpenVPN server and via the tunnel.
+    -A OUTPUT -o tun+ -j ACCEPT
+    -A OUTPUT -p udp -m udp -d 203.0.113.100 --dport 1194 -j ACCEPT
+    
+    # Reject everything else.
+    -A INPUT -m conntrack --ctstate INVALID -j DROP
+    -A INPUT -j REJECT --reject-with icmp-port-unreachable
+    -A FORWARD -j REJECT --reject-with icmp-port-unreachable
+    -A OUTPUT -j REJECT --reject-with icmp-port-unreachable
+    COMMIT
+    
+
+After you have established the OpenVPN tunnel, load the firewall rules.
+    
+    
+    # iptables-restore &lt; /root/iptables.openvpn
+    
+
+Network traffic should now be confined to the tunnel, and won't leak if the routes change or the tunnel is broken.
+
+## Integrate with libvirt
+
+If you use local virtual machines, you may need to edit the firewall rules to allow Internet access.
+
+Note
+
+These instructions assume you're using the default (NAT-based) virtual network that libvirtd creates.
+
+For the default virtual network to function, libvirtd inserts some [firewall rules][1]. These rules aren't present in the firewall rules above. Ask libvirtd to re-insert them by sending a `SIGHUP`.
+    
+    
+    # systemctl reload libvirtd.service
+    
+
+However, one of the rules that libvirtd inserts is too relaxed. It allows virtual machines to communicate over any network interface.
+    
+    
+    -A FORWARD -s 192.168.122.0/24 -i virbr0 -j ACCEPT
+    
+
+Identify the line number of the offending rule.
+    
+    
+    # iptables --line-numbers -nL FORWARD 
+          | awk '$5==&quot;192.168.122.0/24&quot; {print $1; exit}'
+    2
+    
+
+Replace it with a rule that allows virtual machines to only access the Internet via the TUN interface.
+    
+    
+    # iptables -R FORWARD 2 -s 192.168.122.0/24 -i virbr0 -o tun+ -j ACCEPT
+    
+
+## Bypass OpenVPN for a specific Unix user
+
+See the [next article][2].
+
+[1]: https://libvirt.org/firewall.html
+[2]: https://jamielinux.com/blog/bypass-openvpn-for-a-specific-unix-user/
+
+  </pre>
+</div>
 <div created="20170909192350550" modified="20170913010729614" title="git">
 <pre>```
 $ git clone &lt;repo&gt;
@@ -8855,7 +9226,7 @@ $ git remote add origin git@github.com:project9501/&lt;project&gt;.git
 $ git push -u origin master
 ```</pre>
 </div>
-<div created="20170901055755888" modified="20170907051322946" tags="" title="Index">
+<div created="20170901055755888" modified="20170917232339168" tags="" title="Index">
 <pre>[[CLI Utilities]]
 
 [[Arch Linux Index]]
@@ -9122,6 +9493,149 @@ _~resir014_
 [3]: https://byparker.com/blog/2014/clearing-up-confusion-around-baseurl/
 [4]: https://jekyllrb.com/docs/home/
 [5]: https://github.com/resir014/resir014-tilde</pre>
+</div>
+<div created="20170917220221742" modified="20170917220235535" title="Linux kernel transproxy packet leak">
+<pre>&quot;&quot;&quot;
+[tor-talk] Linux kernel transproxy packet leak (w/ repro case +	workaround)
+
+Mike Perry mikeperry at torproject.org 
+Fri Mar 28 19:43:12 UTC 2014
+Previous message: [tor-talk] Safer Anonymous Operating System Guide
+Next message: [tor-talk] [tor-dev] Linux kernel transproxy packet leak (w/	repro case + workaround)
+Messages sorted by: [ date ] [ thread ] [ subject ] [ author ]
+Hello all,
+
+I've discovered that the Linux kernel appears to have a leak in how it
+applies transproxy rules to the TCP CLOSE_WAIT shutdown condition under
+certain circumstances. This applies to both the kernels in use by common
+Android devices (Cyanogenmod 10.x and 11-M4), as well as the Linux
+kernel in Ubuntu 13.04 (3.8.0-35-generic).
+
+The bug can be triggered either by a remote server closing a connection,
+or by restarting the local tor client.
+
+Basically, the bug happens when a transproxy connection shuts down
+completely before a client application properly closes the socket. This
+seems to cause the kernel to lose track of the fact that the client
+application connection was being transproxied, and when the client
+application finally does close its socket (or exits), the Linux kernel
+generates a FIN ACK that completely bypasses any transproxy rules you
+have installed. It sends this packet first as the UID of the app in
+question, and if that fails, it resends it as a blank UID (the kernel
+itself).
+
+
+Here's how to reproduce it and see for yourself:
+
+First run the attached iptables script, and launch a tor daemon with the
+attached torrc (edit the iptables script's TOR_UID=`id -u debian-tor`
+and NETWORK_USER_ID=1000 vars if your setup is different).
+
+Then, fire up tcpdump, like so:
+ sudo tcpdump -n -i wlan0 host 74.125.28.104 and tcp port 80
+
+Replace '-i wlan0' with your network interface. If you use '-i any', you
+will also see transproxied packets (which are not normally leaked).
+
+Then, as your transproxied user, paste this python snippet into a python
+interpreter:
+ import socket
+ s = socket.create_connection((&quot;74.125.28.104&quot;, 80))
+
+(That IP handles www.google.com).
+
+After the connection is made, you should see something like the
+following in 'netstat -natp':
+ tcp  0 0  127.0.0.1:9040      192.168.1.23:42235 ESTABLISHED 1121/tor        
+ tcp  0 0  192.168.1.23:42235  74.125.28.104:80   ESTABLISHED 977/python      
+
+At this point, either wait a couple minutes for Google to close that
+connection on you, or shut down your Tor daemon. In either case, you
+should see the first connection transition to TIME_WAIT, or FIN_WAIT2,
+or similar, lose track of its PID+UID, and then finally disappear
+entirely, but the python program will remain in CLOSE_WAIT indefinitely.
+
+Once the first connection is fully gone (this takes 60s from TIME_WAIT
+state with default TCP settings), issue this in your python shell:
+ s.close()
+
+At this point, you will see a FIN ACK or RST ACK packet appear in your
+tcpdump window. That packet has leaked past the iptables firewall rules,
+and past the transproxy rules. It went straight to Google.
+
+I have noticed several Android apps (including Firefox, F-Droid, and
+many Google apps and Android services) that allow their sockets to sit
+in CLOSE_WAIT upon remote close while transproxied, and they all leak
+packets in this case, which happens frequently in normal usage. I am not
+sure if this is just a common programming error, an issue with how the
+Android networking APIs are designed, something specifically exacerbated
+by the transproxy, or some combination of these.
+
+
+For a workaround, I was able to prevent this issue with the addition
+of the following rules:
+ iptables -I OUTPUT ! -o lo ! -d 127.0.0.1 ! -s 127.0.0.1 -p tcp -m tcp --tcp-flags ACK,FIN ACK,FIN -j DROP
+ iptables -I OUTPUT ! -o lo ! -d 127.0.0.1 ! -s 127.0.0.1 -p tcp -m tcp --tcp-flags ACK,RST ACK,RST -j DROP
+
+None of the transproxy documentation I could find mentions this issue,
+nor suggests any additional safety rules. This means every transproxied
+Tor user is unwittingly leaking packets, at least some of the time.
+Sorry to be the bearer of bad news.
+
+Please send workaround discussion to tor-talk, and kernel/TCP state
+machine discussion to tor-dev. I Cc'd both like a jerk, because I figure
+each group might have different sets of commentary, and both groups
+should be aware of this issue. Don't be a jerk like me, please. Use your
+best judgment to Cc one list or the other.
+
+
+
+-- 
+Mike Perry
+-------------- next part --------------
+#!/bin/bash
+
+IPTABLES=/sbin/iptables
+TOR_UID=`id -u debian-tor`
+NETWORK_USER_ID=1000
+
+# Clear existing rules
+$IPTABLES -F INPUT
+$IPTABLES -F OUTPUT 
+$IPTABLES -t nat -F
+
+## Transproxy rules for Tor
+$IPTABLES -t nat -A OUTPUT ! -d 127.0.0.1 -m owner ! --uid-owner $TOR_UID -p tcp -j REDIRECT --to-ports 9040 || exit
+$IPTABLES -t nat -A OUTPUT -p udp -m owner ! --uid-owner $TOR_UID -m udp --dport 53 -j REDIRECT --to-ports 5300 || exit
+
+# Allow Tor and the network user
+$IPTABLES -A OUTPUT -m owner --uid-owner $TOR_UID -j ACCEPT || exit
+$IPTABLES -A OUTPUT -m owner --uid-owner $NETWORK_USER_ID -j ACCEPT
+$IPTABLES -A INPUT -j LOG --log-prefix &quot;OUTPUT DROPPED: &quot; --log-uid || exit
+$IPTABLES -A OUTPUT -j DROP || exit
+
+
+# Create INPUT firewall. Allow established connections and transproxy
+$IPTABLES -A INPUT -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT || exit
+$IPTABLES -A INPUT -i lo -j ACCEPT # Transproxy output comes from lo
+$IPTABLES -A INPUT -d 127.0.0.1 -m udp -p udp --dport 5300 -j ACCEPT || exit
+$IPTABLES -A INPUT -j LOG --log-prefix &quot;INPUT DROPPED: &quot; --log-uid || exit
+$IPTABLES -A INPUT -j DROP || exit
+-------------- next part --------------
+RunAsDaemon 1
+DataDirectory /var/lib/tor
+Log info file /var/lib/tor/log
+User debian-tor
+DNSPort 5300
+TransPort 9040
+-------------- next part --------------
+A non-text attachment was scrubbed...
+Name: signature.asc
+Type: application/pgp-signature
+Size: 801 bytes
+Desc: Digital signature
+URL: &lt;http://lists.torproject.org/pipermail/tor-talk/attachments/20140328/05230da5/attachment.sig&gt;
+&quot;&quot;&quot;</pre>
 </div>
 <div created="20170903230301505" modified="20170903230454020" title="pacman">
 <pre>Don't want certain files updated?  Add them to /etc/pacman.conf:IgnoreFiles

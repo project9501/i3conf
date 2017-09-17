@@ -225,7 +225,7 @@ mode "session" {
 	bindsym l				exec $lock; mode "default"
 
 	# Suspend
-	bindsym s				exec $lock; exec systemctl suspend; mode "default"
+	bindsym s				exec $lock && exec systemctl suspend; mode "default"
 
 	# Halt
 	bindsym h				exec systemctl halt; mode "default"
