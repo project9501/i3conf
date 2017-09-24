@@ -247,10 +247,16 @@ mode "launch" {
 	bindsym Shift+w			exec firefox-esr --no-remote -P; mode "default"
 	
 	# Journal
-	bindsym j				exec firefox-esr --no-remote -P default ~/.sysdocs/journal.html; mode "default"
+	bindsym j				exec --no-startup-id firefox-esr --no-remote -P default ~/.sysdocs/journal.html; mode "default"
 	
 	# GIMP
-	bindsym g				exec gimp; mode "default"
+	bindsym g				exec --no-startup-id gimp; mode "default"
+
+	# Thunderbird
+	bindsym e				exec --no-startup-id thunderbird; mode "default"
+
+	# Nixnote
+	bindsym n				exec --no-startup-id ~/bin/nixnote.sh; mode "default"
 }
 
 bindsym F6					mode "launch"
