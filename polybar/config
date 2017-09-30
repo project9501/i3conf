@@ -13,7 +13,8 @@
 background = #000
 background-alt = #444
 ;foreground = ${xrdb:color7:#222}
-foreground = #dfdfdf
+;foreground = #dfdfdf
+foreground = #ffdf00
 foreground-alt = #555
 primary = #ffb52a
 secondary = #e60053
@@ -52,7 +53,8 @@ font-2 = siji:pixelsize=11;1
 
 modules-left = i3 mpd
 #modules-center = mpd
-modules-right = home filesystem volume wlan vpn battery temperature date powermenu
+#modules-right = home filesystem volume wlan vpn battery temperature date powermenu
+modules-right = volume cpu memory battery temperature date powermenu
 
 tray-position = right
 tray-padding = 0
@@ -164,6 +166,7 @@ label-urgent-padding = ${module/bspwm.label-urgent-padding}
 
 [module/mpd]
 type = internal/mpd
+host = /var/run/mpd/socket
 format-online = <label-song> <label-time> <toggle>
 
 ;icon-prev = 
@@ -175,7 +178,7 @@ icon-prev = <-
 icon-stop = X
 icon-play-prefix = #f00
 icon-play = (Paused)
-icon-pause = 
+icon-pause = .
 icon-next = ->
 
 ;bar-progress-width = 45
@@ -240,11 +243,11 @@ format-disconnected =
 ;label-disconnected = %ifname% disconnected
 ;label-disconnected-foreground = ${colors.foreground-alt}
 
-ramp-signal-0 = 
-ramp-signal-1 = 
-ramp-signal-2 = 
-ramp-signal-3 = 
-ramp-signal-4 = 
+ramp-signal-0 = .
+ramp-signal-1 = o
+ramp-signal-2 = O
+ramp-signal-3 = i
+ramp-signal-4 = |
 ramp-signal-foreground = ${colors.foreground-alt}
 
 [module/vpn]
@@ -268,16 +271,19 @@ format-disconnected =
 type = internal/date
 interval = 5
 
-date = " %a, %b %d, %Y"
+;date = " %a, %b %d, %Y"
+date = "%Y-%m-%d"
 ;date-alt = " %a, %b %d, %Y at %I:%M%p"
 ;date-alt = " %Y-%m-%d"
 
-time = " at %H:%M"
+;time = " at %H:%M"
 ;time = " at %I:%M%p"
+time = " %H%M"
 ;time-alt = %H:%M:%S
 ;time-alt = %H:%M:%S
 
-format-prefix = 
+;format-prefix = 
+format-prefix = ""
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #407ee7
 ;format-underline = #0a6cf5
