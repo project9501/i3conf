@@ -20,6 +20,7 @@ primary = #ffb52a
 secondary = #e60053
 alert = #bd2c40
 col = #00f
+prefix = #FF0
 
 [bar/example]
 ;monitor = ${env:MONITOR:HDMI-1}
@@ -54,7 +55,7 @@ font-2 = siji:pixelsize=11;1
 modules-left = i3 mpd
 #modules-center = mpd
 #modules-right = home filesystem volume wlan vpn battery temperature date powermenu
-modules-right = volume cpu memory battery temperature date powermenu
+modules-right = volume cpu memory battery temperature date 
 
 tray-position = right
 tray-padding = 0
@@ -167,7 +168,7 @@ label-urgent-padding = ${module/bspwm.label-urgent-padding}
 [module/mpd]
 type = internal/mpd
 host = /var/run/mpd/socket
-format-online = <label-song> <label-time> <toggle>
+format-online = <toggle> <label-song> <label-time> 
 
 ;icon-prev = 
 ;icon-stop = 
@@ -178,7 +179,7 @@ icon-prev = <-
 icon-stop = X
 icon-play-prefix = #f00
 icon-play = (Paused)
-icon-pause = .
+icon-pause = 
 icon-next = ->
 
 ;bar-progress-width = 45
@@ -214,16 +215,16 @@ card = intel_backlight
 [module/cpu]
 type = internal/cpu
 interval = 2
-format-prefix = " "
-format-prefix-foreground = ${colors.foreground-alt}
+format-prefix = "C"
+format-prefix-foreground = ${colors.prefix}
 format-underline = #f90000
 label = %percentage%%
 
 [module/memory]
 type = internal/memory
 interval = 2
-format-prefix = " "
-format-prefix-foreground = ${colors.foreground-alt}
+format-prefix = "R"
+format-prefix-foreground = ${colors.prefix}
 format-underline = #4bffdc
 label = %percentage_used%%
 
@@ -257,7 +258,7 @@ interval = 3.0
 
 format-connected-underline = #5ab738
 ;format-connected-underline = #55aa55
-format-connected-prefix = " "
+format-connected-prefix = "+"
 format-connected-prefix-foreground = ${colors.foreground-alt}
 label-connected = %local_ip%
 
@@ -278,12 +279,12 @@ date = "%Y-%m-%d"
 
 ;time = " at %H:%M"
 ;time = " at %I:%M%p"
-time = " %H%M"
+time = "%H%M"
 ;time-alt = %H:%M:%S
 ;time-alt = %H:%M:%S
 
 ;format-prefix = 
-format-prefix = ""
+format-prefix =
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #407ee7
 ;format-underline = #0a6cf5
@@ -297,7 +298,7 @@ format-volume = <label-volume> <bar-volume>
 label-volume = VOL
 label-volume-foreground = ${root.foreground}
 
-format-muted-prefix = " "
+format-muted-prefix = "M "
 format-muted-foreground = ${colors.foreground-alt}
 label-muted = sound muted
 
@@ -332,18 +333,18 @@ format-discharging = <label-discharging>
 #format-discharging = <ramp-capacity> <label-discharging>
 format-discharging-underline = ${self.format-charging-underline}
 
-format-full-prefix = " "
+format-full-prefix = "| "
 format-full-prefix-foreground = ${colors.foreground-alt}
 format-full-underline = ${self.format-charging-underline}
 
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
+ramp-capacity-0 = .
+ramp-capacity-1 = -
+ramp-capacity-2 = +
 ramp-capacity-foreground = ${colors.foreground-alt}
 
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
+animation-charging-0 = x
+animation-charging-1 = x
+animation-charging-2 = x
 animation-charging-foreground = ${colors.foreground-alt}
 animation-charging-framerate = 750
 
@@ -362,19 +363,19 @@ label = %temperature%
 label-warn = %temperature%
 label-warn-foreground = ${colors.secondary}
 
-ramp-0 = 
-ramp-1 = 
-ramp-2 = 
-ramp-foreground = ${colors.foreground-alt}
+ramp-0 = .
+ramp-1 = -
+ramp-2 = +
+ramp-foreground = ${colors.prefix}
 
 [module/powermenu]
 type = custom/menu
 
 format-spacing = 1
 
-label-open = 
+label-open = .
 label-open-foreground = ${colors.secondary}
-label-close =  cancel
+label-close = . cancel
 label-close-foreground = ${colors.secondary}
 label-separator = |
 label-separator-foreground = ${colors.foreground-alt}
