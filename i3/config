@@ -20,6 +20,7 @@ set $term urxvt
 #set $browser firefox-esr	# AUR install
 #set $launcher dmenu_run		# Dmenu for now
 set $browser chromium
+set $safebrowser "--no-startup-id firefox-esr --no-remote -P"
 set $launcher rofi -show run
 set $lock ~/.config/i3/scripts/lock.sh
 set $flash --no-startup-id bash ~/.config/i3/scripts/flash_win.sh
@@ -249,7 +250,7 @@ mode "launch" {
 
 	# Browser
 	bindsym w				exec $browser; mode "default"
-	bindsym Shift+w			exec firefox-esr --no-remote -P; mode "default"
+	bindsym Shift+w			exec $safebrowser; mode "default"
 	
 	# Journal
 	bindsym j				exec --no-startup-id firefox-esr --no-remote -P default ~/.sysdocs/journal.html; mode "default"

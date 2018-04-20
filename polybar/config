@@ -55,7 +55,7 @@ font-2 = siji:pixelsize=11;1
 modules-left = i3 mpd
 #modules-center = mpd
 #modules-right = home filesystem volume wlan vpn battery temperature date powermenu
-modules-right = volume cpu memory battery temperature date 
+modules-right = volume cpu loadavg memory battery temperature date 
 
 tray-position = right
 tray-padding = 0
@@ -187,7 +187,7 @@ icon-next = ->
 ;bar-progress-fill = -
 ;bar-progress-empty = -
 
-label-song-maxlen = 70
+label-song-maxlen = 45
 label-song-ellipsis = true
 
 [module/xbacklight]
@@ -394,6 +394,12 @@ menu-2-0 = power off
 menu-2-0-exec = sudo poweroff
 menu-2-1 = cancel
 menu-2-1-exec = menu-open-0
+
+[module/loadavg]
+type = custom/script
+interval = 10
+format-underline = #aa00aa
+exec = ~/.config/polybar/scripts/loadavg.sh
 
 [settings]
 screenchange-reload = true
