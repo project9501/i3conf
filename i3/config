@@ -19,7 +19,7 @@ set $mod Mod4
 set $term urxvt
 #set $browser firefox-esr	# AUR install
 #set $launcher dmenu_run		# Dmenu for now
-set $browser chromium
+set $browser firefox
 set $safebrowser "--no-startup-id firefox-esr --no-remote -P"
 set $launcher rofi -show run
 set $lock ~/.config/i3/scripts/lock.sh

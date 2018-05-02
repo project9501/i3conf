@@ -1,0 +1,1 @@
+/home/paladin/work/chrono/druidcal.sh
