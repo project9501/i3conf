@@ -1,1 +1,1 @@
-/home/paladin/work/chrono/druidcal.sh
+/home/jphoenix/bin/druidcal

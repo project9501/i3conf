@@ -4,7 +4,7 @@
 # Jack Phoenix <https://phoeni.xyz>
 
 # #--- Basic Definitions ---# #
-set $mod Super									# This should be the Purism key
+set $mod Mod4									# This should be the Purism key
 
 # System aliases
 set $shutdown "sudo -A systemctl poweroff"
@@ -83,7 +83,7 @@ exec_always feh --randomize --bg-scale ~/.config/wallpaper/*
 
 # Polybar
 # NOTE: soon to be deprecated in favor of i3blocks
-exec_always --no-startup-id ~/.config/polybar/launch.sh
+#exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 # Wifi widget
 exec --no-startup-id nm-applet
@@ -109,13 +109,13 @@ exec --no-startup-id dunst
 
 # #--- i3blocks status bar ---# #
 
-#bar {
-#	font pango:mono 10
-#	status_command i3blocks
-#	position top
-#	mode dock
-#	modifier None
-#}
+bar {
+	font pango:mono 10
+	status_command i3blocks
+	position top
+	mode dock
+	modifier None
+}
 
 
 # #--- Key Bindings ---# #

@@ -1,1 +1,1 @@
-/home/paladin/bin/stardate
+/home/jphoenix/bin/stardate

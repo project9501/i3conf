@@ -1,7 +1,7 @@
 #!/bin/bash
 
 DATE=$(date +"%Y-%m-%d-%H-%M-%S")
-CAPDIR=~/pics/screencaps
+CAPDIR=~/Pictures/Screenshots
 
 [ -d $CAPDIR ] || mkdir -p $CAPDIR
 
