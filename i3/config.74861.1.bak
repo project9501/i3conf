@@ -72,6 +72,12 @@ for_window [instance="math"] move position center
 for_window [instance="math"] move scratchpad
 exec --no-startup-id $term -fn "xft:mono:pixelsize=24" -name math -e R -q
 
+for_window [instance="jop_dd"] floating enable
+for_window [instance="jop_dd"] resize set 1200 720
+for_window [instance="jop_dd"] move position center
+for_window [instance="jop_dd"] move scratchpad
+exec --no-startup-id $term -name "jop_dd" -e joplin
+
 # Glances dropdown -- system monitor
 
 for_window [instance="glances"] floating enable
@@ -95,6 +101,7 @@ bindsym $mod+apostrophe		split horizontal ;; exec $term
 bindsym $mod+u				[instance="tpad"] scratchpad show; move position center
 bindsym $mod+c				[instance="math"] scratchpad show; move position center
 bindsym $mod+g				[instance="glances"] scratchpad show; move position center
+bindsym $mod+n				[instance="jop_dd"] scratchpad show; move position center
 
 bindsym $mod+Shift+q		kill
 bindsym $mod+q				kill

@@ -29,7 +29,8 @@ set $pwmgr keepassxc
 ## External Startup Scripts
 # screen resolution
 #exec --no-startup-id xrandr --output eDP-1 --mode 1920x1080
-
+# Xmodmap
+exec --no-startup-id xmodmap ~/.Xmodmap
 # Composite manager
 exec --no-startup-id compton
 # Wallpaper
@@ -64,13 +65,19 @@ for_window [instance="tpad"] floating enable
 for_window [instance="tpad"] resize set 960 600
 for_window [instance="tpad"] move position center
 for_window [instance="tpad"] move scratchpad
-exec --no-startup-id $term -name tpad -e tmux
+exec --no-startup-id $term -name tpad -e tmux new -As"pad"
 
 for_window [instance="math"] floating enable
 for_window [instance="math"] resize set 800 300
 for_window [instance="math"] move position center
 for_window [instance="math"] move scratchpad
 exec --no-startup-id $term -fn "xft:mono:pixelsize=24" -name math -e R -q
+
+for_window [instance="jop_dd"] floating enable
+for_window [instance="jop_dd"] resize set 1200 720
+for_window [instance="jop_dd"] move position center
+for_window [instance="jop_dd"] move scratchpad
+exec --no-startup-id $term -name "jop_dd" -e joplin
 
 # Glances dropdown -- system monitor
 
@@ -95,6 +102,7 @@ bindsym $mod+apostrophe		split horizontal ;; exec $term
 bindsym $mod+u				[instance="tpad"] scratchpad show; move position center
 bindsym $mod+c				[instance="math"] scratchpad show; move position center
 bindsym $mod+g				[instance="glances"] scratchpad show; move position center
+bindsym $mod+n				[instance="jop_dd"] scratchpad show; move position center
 
 bindsym $mod+Shift+q		kill
 bindsym $mod+q				kill
@@ -248,6 +256,9 @@ mode "session" {
 
 	# Restart
 	bindsym r				restart; mode "default"
+
+	# Poweroff
+	bindsym p				exec sudo systemctl poweroff; mode "default"
 }
 
 bindsym $mod+x				mode "session"

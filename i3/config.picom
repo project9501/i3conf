@@ -31,7 +31,7 @@ set $pwmgr keepassxc
 #exec --no-startup-id xrandr --output eDP-1 --mode 1920x1080
 
 # Composite manager
-exec --no-startup-id compton
+exec --no-startup-id picom -b
 # Wallpaper
 exec_always feh --randomize --bg-scale ~/.config/wallpaper/*
 # Polybar
@@ -51,10 +51,6 @@ exec --no-startup-id udiskie --tray
 exec --no-startup-id nextcloud
 # Polkit
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
-# Element-desktop
-exec --no-startup-id /usr/bin/element-desktop --hidden
-# Gajim
-exec --no-startup-id /usr/bin/gajim
 
 floating_modifier $mod
 
