@@ -1,1 +1,1 @@
-/home/jphoenix/bin/druidcal
+/home/jsp/bin/druidcal

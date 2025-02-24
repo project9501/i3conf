@@ -32,6 +32,7 @@ height = 24
 ;offset-y = 1%
 ;radius = 6.0
 fixed-center = false
+bottom = true
 
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -98,7 +99,7 @@ type = internal/fs
 interval = 25
 
 mount-0 = /
-mount-1 = /home/jphoenix
+mount-1 = /home/jsp
 
 label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
 label-unmounted = %mountpoint% not mounted

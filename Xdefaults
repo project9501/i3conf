@@ -32,7 +32,12 @@
 URxvt.intensityStyles:	false
 URxvt.background:       [70]#000000
 URxvt.depth:		32
-URxvt.font: 		xft:monospace:size=11
+!!URxvt.font: 		xft:monospace:size=11
+!!URxvt.font: 		xft:terminus:size=12
+!!URxvt.font:			xft:monoid:size=10
+!!URxvt.font:			xft:verdana:size=11
+URxvt.font:			xft:anonymouspro:size=13, xft:ubraille:size=12
+!!URxvt.font:			xft:Source Code Pro:size=11
 URxvt.scrollBar:	false
 URxvt.cursorColor:	white
 URxvt.perl-ext-common:	default,matcher,resize-font

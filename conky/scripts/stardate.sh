@@ -1,1 +1,1 @@
-/home/jphoenix/bin/stardate
+/home/jsp/bin/stardate
